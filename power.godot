@@ -1,0 +1,21 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+config/name="SwarmDroneSim"
+run/main_scene="res://Main.tscn"
+config/icon="res://assets/drone_icon.png"
+
+[display]
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+textures/canvas_textures/default_texture_filter=1
+anti_aliasing/quality/msaa=2
+environment/defaults/default_clear_color=Color(0.1, 0.1, 0.12, 1)
+
+[editor]
+export/convert_text_resources_to_binary_on_export=false

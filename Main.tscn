@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/Grid.gd" id=1]
+[ext_resource type="Script" path="res://scripts/DroneSpawner.gd" id=2]
+[ext_resource type="Script" path="res://scripts/SimManager.gd" id=3]
+[ext_resource type="Script" path="res://scripts/UI.gd" id=4]
+[ext_resource type="PackedScene" path="res://Drone.tscn" id=5]
+
+[ext_resource type="Script" path="res://scripts/BatchRunner.gd" id=30]
+
+[node name="Main" type="Node2D"]
+
+[node name="Grid" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="HomeBase" type="Node2D" parent="."]
+position = Vector2(640,360)
+
+[node name="Room1" type="Node2D" parent="."]
+position = Vector2(200,200)
+
+[node name="Room2" type="Node2D" parent="."]
+position = Vector2(1080,200)
+
+[node name="Room3" type="Node2D" parent="."]
+position = Vector2(640,600)
+
+[node name="RedBox" type="Node2D" parent="."]
+position = Vector2(640,200)
+
+[node name="DroneSpawner" type="Node2D" parent="."]
+script = ExtResource( 2 )
+drone_scene = ExtResource( 5 )
+
+[node name="SimManager" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 600.0
+offset_bottom = 60.0
+script = ExtResource( 4 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="OptionButton" type="OptionButton" parent="UI/Panel/HBoxContainer"]
+text = "Select Room"
+
+[node name="ButtonDisable" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Disable Leader"
+
+[node name="ButtonRestart" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Restart Mission"
+
+[node name="ButtonTrail" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Toggle Trail"
+
+[node name="ButtonStats" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Toggle Stats"
+
+[node name="ButtonHeatmap" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Toggle Heatmap"
+
+[node name="ChkAutoHideHeatmap" type="CheckBox" parent="UI/Panel/HBoxContainer"]
+text = "Auto-hide Heatmap on Hold"
+button_pressed = true
+
+[node name="BatchRunner" type="Node" parent="."]
+script = ExtResource( 30 )
+
+[node name="ButtonDemo" type="Button" parent="UI/Panel/HBoxContainer"]
+text = "Run Demo Script"

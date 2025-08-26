@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1756136452
+Drone.tscn::PackedScene::-1::1756107588::0::1::::<><>::res://scripts/Drone.gd<>res://assets/drone_icon.png
+Main.tscn::PackedScene::-1::1756107588::0::1::::<><>::res://scripts/Grid.gd<>res://scripts/DroneSpawner.gd<>res://scripts/SimManager.gd<>res://scripts/UI.gd<>res://Drone.tscn<>res://scripts/BatchRunner.gd
+::res://analysis/::1756136433
+::res://assets/::1756136433
+drone_icon.png::CompressedTexture2D::673856039145158922::1756107588::1756136453::1::::<><>::
+::res://scripts/::1756136433
+BatchRunner.gd::GDScript::-1::1756107588::0::1::::<>Node<>::
+Drone.gd::GDScript::-1::1756107588::0::1::::<>CharacterBody2D<>::
+DroneSpawner.gd::GDScript::-1::1756107588::0::1::::<>Node2D<>::
+Grid.gd::GDScript::-1::1756107588::0::1::::<>Node2D<>::
+Heatmap.gd::GDScript::-1::1756107588::0::1::::<>Node2D<>::
+SimManager.gd::GDScript::-1::1756107588::0::1::::SimManager<>Node<>::
+StatsPanel.gd::GDScript::-1::1756107588::0::1::::<>Panel<>::
+UI.gd::GDScript::-1::1756107588::0::1::::<>Panel<>::
